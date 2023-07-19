@@ -47,3 +47,15 @@ const createNewIssue = async () => {
 
   console.log(data)
 }
+
+//ELIMINAR UN REPOSITORIO
+const deleteRepo = async () => {
+  const data = await octokit.rest.repos.delete({
+    owner: 'jaenfigueroa',
+    repo: 'repo-prueba-541',
+  })
+
+  console.log(data)
+}
+
+deleteRepo()
